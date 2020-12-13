@@ -108,7 +108,7 @@ trait HasSortableRows
 
                 if (empty($request->get('orderBy')) && $shouldSort) {
                     $query->getQuery()->orders = [];
-                    return $query->orderBy($sortability->model->determineOrderColumnName());
+                    return $query->orderBy($sortability->model->determineOrderColumnName(), 'desc');
                 }
             }
         }
