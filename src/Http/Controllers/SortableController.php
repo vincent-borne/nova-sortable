@@ -98,14 +98,14 @@ class SortableController
     public function moveToStart(NovaRequest $request)
     {
         $validationResult = $this->validateRequest($request);
-        $validationResult->model->moveToStart();
+        $validationResult->model->moveToEnd();
         return response('', 204);
     }
 
     public function moveToEnd(NovaRequest $request)
     {
         $validationResult = $this->validateRequest($request);
-        $validationResult->model->moveToEnd();
+        $validationResult->model->moveToStart();
         return response('', 204);
     }
 
