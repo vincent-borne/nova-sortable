@@ -14,7 +14,7 @@ class SortableController
         $model = $validationResult->model;
 
         $resourceName = $request->route('resource');
-        $resourceIds = $request->input('resourceIds');
+        $resourceIds = array_reverse($request->input('resourceIds'));
         $viaResource = $request->input('viaResource');
         $viaResourceId = $request->input('viaResourceId');
         $viaRelationship = $request->input('viaRelationship');
